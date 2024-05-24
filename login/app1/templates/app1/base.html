@@ -33,7 +33,7 @@
                       <a class="nav-link" href={% url 'login' %}>Ingresar</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Registrarse</a>
+                      <a class="nav-link" href={% url 'register' %}>Registrarse</a>
                     </li>
                     {% endif %}
                   </li>
@@ -42,7 +42,7 @@
             </div>
           </nav>
 
-        <h2>Inicio</h2>
+        <h2>Autentificacion de Usuario</h2>
 
         {% block content %} {% endblock %}
     </div>
