@@ -21,13 +21,21 @@
                     <a class="nav-link active" aria-current="page" href={% url 'home' %}>Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href={% url 'products' %}>Productos</a>
+                    <a class="nav-link" href={% url 'products' %}>Cursos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                      <a class="nav-link" href={% url 'exit' %}>Salir</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link" href={% url 'login' %}>Ingresar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Registrarse</a>
+                    </li>
+                    {% endif %}
                   </li>
                 </ul>
               </div>
@@ -35,16 +43,7 @@
           </nav>
 
         <h2>Inicio</h2>
-        <ul>
-            <li><a href={% url 'home' %}>Inicio</a></li>
-            <li><a href={% url 'products' %}>Productos</a></li>
-    
-            {% if request.user.is_authenticated %}
-            <li><a href={% url 'exit' %}>Salir</a></li>
-            {% else %}
-            <li><a href={% url 'login' %}>Ingresar</a></li>
-            {% endif %}
-        </ul>
+
         {% block content %} {% endblock %}
     </div>
 
