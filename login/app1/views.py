@@ -15,4 +15,7 @@ def exit(request):
     return redirect('home')
 
 def register(request):
-    return render(request, 'registration/register.html')
+    data ={
+        'form': CustomUserCreationForm()
+    }
+    return render(request, 'registration/register.html', data)
