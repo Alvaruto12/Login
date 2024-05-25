@@ -2,7 +2,7 @@
 {% block content %} 
 
 {% load crispy_forms_tags %}
-<h3>Resistro de usuario</h3>
+<h3>Registro de usuario</h3>
 
 <br>
 
@@ -12,13 +12,11 @@
     <div class="card mx-auto" style="width: 30rem;">
         <div class="card-body">
           <h5 class="card-title">Complete todos los datos</h5>
-          {{form | crispy}}
+          {{ form | crispy }}
           <a href={% url 'login' %} class="card-link">Iniciar Sesion</a>
           <button class="btn btn-sm btn-primary float-end" type="submit">Registrarse</button>
         </div>
       </div>
-
-
 
 </form>
 
