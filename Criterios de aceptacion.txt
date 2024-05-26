@@ -6,9 +6,9 @@ DADO que soy un usuario no registrado o ingreso credenciales incorrectas,
 CUANDO intento iniciar sesión con un nombre de usuario o contraseña incorrectos,
 ENTONCES debo recibir un mensaje de error claro y comprensible indicando que las credenciales son incorrectas.
 
-DADO que el usuario quiere acceder a la información
+DADO que soy un usuario que quiere acceder a los contenidos
 CUANDO este no esté logueado
-ENTONCES la pagina le exigirá el login
+ENTONCES la pagina me exigirá el login
 
 DADO que soy un cliente en que usa celular y computador,
 CUANDO ingreso a la pagina
