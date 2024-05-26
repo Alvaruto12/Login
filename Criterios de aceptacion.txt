@@ -1,0 +1,15 @@
+DADO que soy un usuario registrado,
+CUANDO ingreso mi nombre de usuario y contraseña correctos,
+ENTONCES debo poder iniciar sesión y ser redirigido a la página principal 
+
+DADO que soy un usuario no registrado o ingreso credenciales incorrectas,
+CUANDO intento iniciar sesión con un nombre de usuario o contraseña incorrectos,
+ENTONCES debo recibir un mensaje de error claro y comprensible indicando que las credenciales son incorrectas.
+
+DADO que el usuario quiere acceder a la información
+CUANDO este no esté logueado
+ENTONCES la pagina le exigirá el login
+
+DADO que soy un cliente en que usa celular y computador,
+CUANDO ingreso a la pagina
+ENTONCES debe funcionar correctamente en múltiples navegadores y dispositivos.(Este criterio no funciona del todo, el navbar no se despliega en la vista de celular
